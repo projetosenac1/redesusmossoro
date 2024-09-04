@@ -1,0 +1,52 @@
+.wrapper{
+  position: relative;
+  width: 600px;
+  padding: 3px;
+  overflow: hidden;
+}
+
+.slider{
+  display: flex;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+}
+
+.image{
+  width: calc(100% / 3);
+  height: 250px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.controls{
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button{
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+i{
+  font-size: 28px;
+  cursor: pointer;
+
+}
