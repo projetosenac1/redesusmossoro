@@ -8,60 +8,72 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-  <div class="wrapper">
-    <div class="slider">
-      <div class="slide">
-        <div class="image" style="background: url(https://i.pinimg.com/736x/68/33/90/683390e39ed108bc09ab9bee7c7a64b4.jpg);background-size: cover;
+  <div class="slide-wrapper">
+    <div class="slide-slider">
+      <div class="slide-slide">
+        <div class="slide-image" style="background: url(https://i.pinimg.com/736x/68/33/90/683390e39ed108bc09ab9bee7c7a64b4.jpg);background-size: cover;
         background-position: center;"></div>
-        <div class="image" style="background: url(https://th.bing.com/th/id/OIP.d6DgEI6vFpUH1mBpD2aNZQHaEx?rs=1&pid=ImgDetMain);background-size: cover;
+        <div class="slide-image" style="background: url(https://th.bing.com/th/id/OIP.d6DgEI6vFpUH1mBpD2aNZQHaEx?rs=1&pid=ImgDetMain);background-size: cover;
         background-position: center;"></div>
-        <div class="image" style="background: url(https://static.valorantzone.gg/news/2021/01/13183045/yoru.jpg);background-size: cover;
-        background-position: center;"></div>
-      </div>
-
-      <div class="slide">
-        <div class="image" style="background: url(https://files.bo3.gg/uploads/image/25997/image/webp-1c0636d141d7c8144306e256255692ad.webp);background-size: cover;
-        background-position: center;"></div>
-        <div class="image" style="background: url(https://th.bing.com/th/id/OIP.d6DgEI6vFpUH1mBpD2aNZQHaEx?rs=1&pid=ImgDetMain);background-size: cover;
-        background-position: center;"></div>
-        <div class="image" style="background: url(https://static.valorantzone.gg/news/2021/01/13183045/yoru.jpg);background-size: cover;
+        <div class="slide-image" style="background: url(https://static.valorantzone.gg/news/2021/01/13183045/yoru.jpg);background-size: cover;
         background-position: center;"></div>
       </div>
 
-      <div class="slide">
-        <div class="image" style="background: url(https://i.pinimg.com/736x/68/33/90/683390e39ed108bc09ab9bee7c7a64b4.jpg);background-size: cover;
+      <div class="slide-slide">
+        <div class="slide-image" style="background: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Draven_29.jpg);background-size: cover;
         background-position: center;"></div>
-        <div class="image" style="background: url(https://th.bing.com/th/id/OIP.d6DgEI6vFpUH1mBpD2aNZQHaEx?rs=1&pid=ImgDetMain);background-size: cover;
+        <div class="slide-image" style="background: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_36.jpg);background-size: cover;
         background-position: center;"></div>
-        <div class="image" style="background: url(https://static.valorantzone.gg/news/2021/01/13183045/yoru.jpg);background-size: cover;
+        <div class="slide-image" style="background: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_9.jpg);background-size: cover;
         background-position: center;"></div>
       </div>
-      <div class="controls">
-        <button class="prev-slide"> 
-          <i class="fa-solid fa-circle-arrow-left"></i>
-        </button>
-        <button class="next-slide"> 
-          <i class="fa-solid fa-circle-arrow-right"></i>
-        </button>
+
+      <div class="slide-slide">
+        <div class="slide-image" style="background: url(https://th.bing.com/th/id/OIP.m9mthBl9jo2ImIFGSnvjoAHaEK?w=297&h=180&c=7&r=0&o=5&pid=1.7);background-size: cover;
+        background-position: center;"></div>
+        <div class="slide-image" style="background: url(https://th.bing.com/th/id/OIP.YPbmJMRM6r4NK3agxsvxyQHaEK?w=278&h=180&c=7&r=0&o=5&pid=1.7);background-size: cover;
+        background-position: center;"></div>
+        <div class="slide-image" style="background: url(https://th.bing.com/th/id/OIP.PPPzBdSYnvLpU53xBBnO4QHaEK?w=295&h=180&c=7&r=0&o=5&pid=1.7);background-size: cover;
+        background-position: center;"></div>
       </div>
-  </div>
+    
+    </div>
+
+    <div class="slide-controls">
+      <button class="slide-prev-slide"> 
+        <i class="fa-solid fa-circle-chevron-left"></i>
+      </button>
+      <button class="slide-next-slide"> 
+        <i class="fa-solid fa-circle-chevron-right"></i>
+      </button>
+    </div>
   <script>
-    const slider = document.querySelector('.slider');
-    const imageSlider = document.querySelectorAll(".slide");
-    const prevBtn = document.querySelector('.prev-slide');
-    const nextbtn = document.querySelector('.next-slide');
+    const slider = document.querySelector('.slide-slider');
+    const imageSlider = document.querySelectorAll(".slide-slide");
+    const prevBtn = document.querySelector('.slide-prev-slide');
+    const nextBtn = document.querySelector(".slide-next-slide");
 
     let slideIndex = 0;
     imageSlider[slideIndex].classList.add("active");
 
+    prevBtn.addEventListener("click", prevSlide);
     nextBtn.addEventListener("click", nextSlide);
+
+
+    function prevSlide() {
+      imageSlider[slideIndex].classList.remove("active");
+
+      slideIndex = (slideIndex === 0) ? imageSlider.length - 1 :slideIndex - 1;
+      imageSlider[slideIndex].classList.add("active");
+      slider.style.transform = `translateX(-${slideIndex * 100}%)`
+    }
 
     function nextSlide () {
       imageSlider[slideIndex].classList.remove("active");
 
-      slideIndex = (slideIndex === imageSlider.length - 1) ? 0 : slideIndex + 1;
+      slideIndex = (slideIndex === imageSlider.length - 1) ? 0 :slideIndex + 1;
       imageSlider[slideIndex].classList.add("active");
-      slider.style.transform = 'translateX(-${slideIndex})'
+      slider.style.transform = `translateX(-${slideIndex * 100}%)`
     }
 
   </script>
