@@ -1,33 +1,39 @@
-.wrapper{
+.slide-wrapper{
   position: relative;
   width: 600px;
   padding: 3px;
   overflow: hidden;
 }
 
-.slider{
+.slide-slider {
   display: flex;
+  transition: transform 0.4s ease-in-out; 
 }
 
-.slide {
+.slide-slide {
   flex: 0 0 100%;
   display: flex;
 }
+.slide-slide.active {
+  transform: translateX(0);
+  transition: transform 0.4s ease-in-out;
+}
 
-.image{
+.slide-image{
   width: calc(100% / 3);
   height: 250px;
   margin: 10px;
   cursor: pointer;
+  transition: all 0.3s;
   border-radius: 4px;
 }
 
-.controls{
+.slide-controls{
   position: absolute;
   bottom: 45%;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
+  display: flex ;
   justify-content: space-between;
   width: 100%;
 }
@@ -49,4 +55,9 @@ i{
   font-size: 28px;
   cursor: pointer;
 
+}
+
+.slide-image:hover {
+  transform: scale(1.1);
+  
 }
