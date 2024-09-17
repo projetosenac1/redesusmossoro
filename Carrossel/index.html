@@ -59,6 +59,14 @@
     prevBtn.addEventListener("click", prevSlide);
     nextBtn.addEventListener("click", nextSlide);
 
+    function prevSlide() {
+      imageSlider[slideIndex].classList.remove("active");
+
+      slideIndex = (slideIndex === 0) ? imageSlider.length - 1 :slideIndex - 1;
+      imageSlider[slideIndex].classList.add("active");
+      slider.style.transform = `translateX(-${slideIndex * 100}%)`
+    }
+
 
     function prevSlide() {
       imageSlider[slideIndex].classList.remove("active");
