@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylex.css">
+    <link rel="stylesheet" href="styleservicos.css">
     <title>RedeSus</title>
     <link rel="website icon" type="png" href="Imagens/Imagens do Menu/Logo coração.png">
 
@@ -39,63 +39,129 @@
 
     </div>
     
-    <nav class="navbar">
-     
-        <ul class="navbar-menu">
-            <li class="navbar-item"><a href="redesus.html">Home</a></li>
-            <div class="dropdown">
-                <button class="dropbtn">Unidade de atendimento</button>
-                <div class="dropdown-content">
-                    <a href="">UBSs</a>
-                    <a href="">UPAs</a>
-                    <a href="">CAPSs</a>
-                </div>
-            </div> 
-            <li class="navbar-item"><a href="servicos.html">Serviços</a></li>
-            <li class="navbar-item"><a href="sobrenos.html">Sobre Nós</a></li>
-            <li class="navbar-item"><a href="Carrossel/index.html">Classificação</a></li>
-               
-        </ul>
-    </nav>
+    <section class="bottom-header">
 
+        <div class="interface">
+    
+            <nav>
+                <ul>
+                    <li><a href="redesus.html">Home</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li class="drop-hover"><a href="#">Unidades de Atendimento &#x25BE</a>
+                        <div class="drop">
+                            <a href="https://www.google.com.br/maps/search/UBSs+Mossor%C3%B3/@-5.1830032,-37.3888189,13z/data=!3m1!4b1?hl=pt-BR&entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">UBS</a>
+                            <a href="https://www.google.com.br/maps/search/UPAs+Mossor%C3%B3/@-5.1828296,-37.388819,13z/data=!3m1!4b1?hl=pt-BR&entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">UPA</a>
+                            <a href="https://www.google.com.br/maps/search/CAPSs+Mossor%C3%B3/@-5.1899169,-37.3669741,15z/data=!3m1!4b1?hl=pt-BR&entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">CAPS</a>
+                        </div>
+                    </li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="classificacoes.html">Classificações</a></li>
+    
+                </ul>
+            </nav>
+    
+    
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <div class="container">
         <div class="serv">
                         
-            <button class="componente"><img src="Imagens/Imagens do Serviços/Academia da Saúde.png" alt="" class="fotinha"> Academia da Saúde</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/Atenção Psicossocial.png" alt="" class="fotinha">Atenção Psicossocial</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/PRAEM.png" alt="" class="fotinha">PRAEM</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/Hospital.png" alt="" class="fotinha">Hospital</button>      
-            <button class="componente"><img src="Imagens/Imagens do Serviços/AMI.png" alt="" class="fotinha">AMI</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/Serviços Hemoterápicos.png" alt="" class="fotinha">Serviços Hemoterápicos</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/PAM.png" alt="" class="fotinha">PAM</button> 
-            <button class="componente"><img src="Imagens/Imagens do Serviços/Central de Regulação.png" alt="" class="fotinha">Central de Regulação</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/Consultório de Rua.png" alt="" class="fotinha">Consultório de Rua</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/CER.png" alt="" class="fotinha">CER</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/Centro de Zoonoses.png" alt="" class="fotinha">Centro de Zoonoses</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/Vigilância Sanitária.png" alt="" class="fotinha">Vigilância Sanitária</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/Saúde Bucal.png" alt="" class="fotinha">Saúde Bucal</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/Centro de Obesidade.png" alt="" class="fotinha">Centro de Obesidade</button>
-            <button class="componente"><img src="Imagens/Imagens do Serviços/SAD.png" alt="" class="fotinha">SAD</button>
+            <button class="componente" title="Academia de Saúde"><a href="#box1"><img src="Imagens/Imagens do Serviços/Academia da Saúde.png" alt="Academia de Saúde" class="fotinha"></a></button>
+            <button class="componente" title="Atenção Psicossocial"><a href="#box2"><img src="Imagens/Imagens do Serviços/Atenção Psicossocial.png" alt="" class="fotinha"></a> </button>
+            <button class="componente" title="P.R.A.E.M."><a href="#box3"><img src="Imagens/Imagens do Serviços/PRAEM.png" alt="" class="fotinha"></a> </button>
+            <button class="componente" title="Hospital"><a href="#box4"><img src="Imagens/Imagens do Serviços/Hospital.png" alt="" class="fotinha"></a></button>   
+            <button class="componente" title="A.M.I."><a href="#box5"><img src="Imagens/Imagens do Serviços/AMI.png" alt="" class="fotinha"></a></button>
+            <button class="componente" title="Serviços Hemoterápicos"><a href="#box6"><img src="Imagens/Imagens do Serviços/Serviços Hemoterápicos.png" alt="" class="fotinha"></a></button>
+            <button class="componente" title="P.A.M."><a href="#box7"><img src="Imagens/Imagens do Serviços/PAM.png" alt="" class="fotinha"></a></button> 
+            <button class="componente" title="Central de Regulação"><a href="#box8"><img src="Imagens/Imagens do Serviços/Central de Regulação.png" alt="" class="fotinha"></a></button>
+            <button class="componente" title="Consultório de Rua"><a href="#box9"><img src="Imagens/Imagens do Serviços/Consultório de Rua.png" alt="" class="fotinha"></a></button>
+            <button class="componente" title="C.E.R."><a href="#box10"><img src="Imagens/Imagens do Serviços/CER.png" alt="" class="fotinha"></a></button>
+            <button class="componente" title="Centro de Zoonoses"><a href="#box11"><img src="Imagens/Imagens do Serviços/Centro de Zoonoses.png" alt="" class="fotinha"></a></button>
+            <button class="componente" title="Vigilância Sanitária"><a href="#box12"><img src="Imagens/Imagens do Serviços/Vigilância Sanitária.png" alt="" class="fotinha"></a></button>
+            <button class="componente" title="Saúde Bucal"><a href="#box13"><img src="Imagens/Imagens do Serviços/Saúde Bucal.png" alt="" class="fotinha"></a></button>
+            <button class="componente" title="Centro de Obesidade"><a href="#box14"><img src="Imagens/Imagens do Serviços/Centro de Obesidade.png" alt="" class="fotinha"></a></button>
+            <button class="componente" title="S.A.D."><a href="#box15"><img src="Imagens/Imagens do Serviços/SAD.png" alt="" class="fotinha"></a></button>
         
         </div>
         
-        <div class="image-container">
-            <img src="Imagens/Imagens do Serviços/Group 8.png" alt="Imagem ao lado" class="imagem-lateral">
+        <div class="image-servicos">
+            <div class="image-container togger" id="box1">
+                <a href="#box1"><img src="Imagens/Imagens do Serviços/Group 8.png" alt="Academia de Saúde" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box2">
+                <a href="#box2"><img src="imagem servirço/CAPS.png" alt="Atenção Psicossocial" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box3">
+                <a href="#box3"><img src="imagem servirço/PRAEM.png" alt="PRAEM" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box4">
+                <a href="#box4"><img src="imagem servirço/HOSPITAL.png" alt="Hospital" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container to gger" id="box5">
+                <a href="#box5"><img src="imagem servirço/AMI.png" alt="AMI" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box6">
+                <a href="#box6"><img src="imagem servirço/SERVIÇO HEMOTERAPICOS.png" alt="Serviço Hemoterápicos" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box7">
+                <a href="#box7"><img src="imagem servirço/PAM.png" alt="PAM" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box8">
+                <a href="#box8"><img src="imagem servirço/CENTRO DE REGULÇÃO.png" alt="Centro de Regulação" class="imagem-lateral"></a>
+            </div> 
+
+            <div class="image-container togger" id="box9">
+                <a href="#box9"><img src="imagem servirço/CONSULTORIO DE RUA.png" alt="Consultorio de Rua" class="imagem-lateral"></a>
+            </div>
+            
+            <div class="image-container togger" id="box10">
+                <a href="#box10"><img src="imagem servirço/CEOR.png" alt="C.E.R" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box11">
+                <a href="#box11"><img src="imagem servirço/CENTRO ZOONOSES.png" alt="Centro de Zoonoses" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box12">
+                <a href="#box12"><img src="imagem servirço/VIGILANCIA A SAUDE.png" alt="Vigilância Sanitária" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box13">
+                <a href="#box13"><img src="imagem servirço/CEOs.png" alt="Imagem ao lado" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box14">
+                <a href="#box14"><img src="imagem servirço/CENTRO DE OBESIDADES.png" alt="Imagem ao lado" class="imagem-lateral"></a>
+            </div>
+
+            <div class="image-container togger" id="box15">
+                <a href="#box15"><img src="imagem servirço/SAD.png" alt="Imagem ao lado" class="imagem-lateral"></a>
+            </div>
         </div>
+
     </div>
+    
+
+   
 </body>
 
-<footer>
-    <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
-    <div class="social-media">
-        <a href="https://www.instagram.com/seuperfil" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://github.com/seuperfil" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/seuperfil" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </div>
-</footer>
+ <footer>
+        <div class=" img">
+            <img src="Imagens/Imagens do Menu/LOGO MOSSORO.png" target="_blank" alt="" class="imgf">
+            <img src="Imagens/Imagens do Menu/LOGO SUS.png" target="_blank" alt="" class="imgf">
+        </div>
+        
+        <div class="Numero">
+            <h2>Ligue: 136</h2>
+            <img src="Imagens/Imagens da Home/Meu SUS Digital.png" alt="">
+        </div>
+
+    </footer>
